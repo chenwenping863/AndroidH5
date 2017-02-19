@@ -42,3 +42,34 @@ Action 本身只是一个字符串，并不起到作用
 intent.setAction("android.action.cwp.xxx");
 系统本省默认提供了很多Action供开发者调用
 
+
+webview 使用
+
+内嵌浏览器空间
+需添加访问网络权限
+
+
+使用时无需考虑网络访问的子线程
+
+加载url
+webView.loadUrl()
+
+加载HTML
+webView.loadData();
+
+
+可以在网页中调用android的功能
+
+设备信息查询
+调用对话框
+首先使用webView允许执行javascript
+
+getSettings 可以获得webview的设置
+
+将JAVASCRIPT代码绑定到Android中的代码
+
+通过addJavascriptInterface()绑定两者
+在android代码中实现对应的接口给javascript
+
+在Script中明确调用接口
+
